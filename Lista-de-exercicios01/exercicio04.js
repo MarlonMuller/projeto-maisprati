@@ -3,10 +3,10 @@ calcular e escrever a média semestral e a seguinte mensagem: ‘PARABÉNS! Voc�
 somente se o aluno foi aprovado (considere 6.0 a nota mínima para aprovação).
 */
 
-//Falta o prompt
+const prompt = require('prompt-sync')();
 
-let nota1 = 3
-let nota2 = 7
+let nota1 = parseInt(prompt('Digite a nota 1: '));
+let nota2 = parseInt(prompt('Digite a nota 2: '));
 
 let media = (nota1 + nota2) / 2;
 

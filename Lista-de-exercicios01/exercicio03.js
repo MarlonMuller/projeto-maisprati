@@ -6,5 +6,15 @@
 */
 
 const prompt = require('prompt-sync')();
-let primeiroNumero = prompt('Digite o primeiro número: ');
-let segundoNumero = prompt('Digite...')
+let primeiroNumero = parseInt(prompt('Digite o primeiro número: '));
+let segundoNumero = parseInt(prompt('Digite o segundo número: '));
+let terceiroNumero = parseInt(prompt('Digite o terceiro número: '));
+let quartoNumero = parseInt(prompt('Digite o quarto número: '));
+
+quartoNumero = primeiroNumero + segundoNumero + terceiroNumero;
+primeiroNumero += 25;
+segundoNumero *= 3;
+terceiroNumero *= 0.12;
+
+
+console.log(primeiroNumero, segundoNumero, terceiroNumero, quartoNumero)
