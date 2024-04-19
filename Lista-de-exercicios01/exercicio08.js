@@ -3,10 +3,10 @@
 e escreve-los em ordem crescente.
 */
 
-// falta o prompt
+const prompt = require('prompt-sync')()
 
-let numberOne = 4;
-let numberTwo = 4;
+let numberOne = parseInt(prompt('Digite o primeiro valor: '));
+let numberTwo = parseInt(prompt('Digite o segundo valor (não pode repetir o primeiro valor): '));
 
 if (numberOne < numberTwo) {
     console.log(numberOne, numberTwo)

@@ -12,9 +12,9 @@ do mesmo, conforme a tabela abaixo:
 Fora dos intervalos - produto importado
 */
 
+const prompt = require('prompt-sync')();
 
-// falta o prompt
-let codigoOrigem = 5;
+let codigoOrigem = parseInt(prompt('Digite o código de origem: '))
 
 if(codigoOrigem == 1) {
     console.log('Sul')

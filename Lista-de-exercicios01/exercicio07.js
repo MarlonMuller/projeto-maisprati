@@ -3,15 +3,17 @@ forem compradas pelo menos doze. Escreva um algoritmo que leia o número de maç
 compradas, calcule e escreva o valor total da compra.
 */
 
-let quantidadeMacas = 15 ;
+const prompt = require('prompt-sync')();
+
+let quantidadeMacas = parseInt(prompt('Digite a quantidade de maçãs compradas: '))
 let precoMenorQueUmaDuzia = 0.30;
 let precoMaiorQueUmaDuzia = 0.25;
 let total;
 
 if ( quantidadeMacas < 12) {
     total = quantidadeMacas * precoMenorQueUmaDuzia
-    console.log(`O valor total da compra é R$ ${total}.`)
+    console.log(`O valor total da compra é R$ ${total}`)
 } else { 
     total = quantidadeMacas * precoMaiorQueUmaDuzia
-    console.log(`O valor total da compra é R$ ${total}.`)
+    console.log(`O valor total da compra é R$ ${total}`)
 }

@@ -8,11 +8,12 @@ Triângulo escaleno: possui todos os lados diferentes (A<>B e B <> C)
 Triângulo eqüilátero: possui todos os lados iguais (A=B e B=C)
 */
 
-// falta o prompt
 
-let ladoA = 8;
-let ladoB = 8;
-let ladoC = 5;
+const prompt = require('prompt-sync')();
+
+let ladoA = parseInt(prompt('Digite o tamanho do lado A: '))
+let ladoB = parseInt(prompt('Digite o tamanho do lado B: '))
+let ladoC = parseInt(prompt('Digite o tamanho do lado C: '))
 
 if(ladoA < ladoB + ladoC && ladoB < ladoA + ladoC && ladoC < ladoA + ladoB){
     
