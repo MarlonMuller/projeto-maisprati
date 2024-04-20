@@ -3,7 +3,7 @@
 divididos por 11, dão resto igual a 5
 */
 
-// falta o prompt
+
 let i;
 
 for(i = 1000; i <= 1999; i++){
