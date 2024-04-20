@@ -156,5 +156,5 @@ let milisegundosEntreDatas = Math.abs(data.getTime() - data1.getTime())
 
 console.log(milisegundosEntreDatas)
 
-
+// Encontrar a quantidade de milissegundos entre duas datas.
 
