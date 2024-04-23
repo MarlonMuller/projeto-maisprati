@@ -1,22 +1,13 @@
-# Como executar os exercícios:
+# Pojeto +PraTi 
 
-## Passo 1: Clone os arquivos em sua máquina:
-#### git clone https://github.com/MarlonMuller/projeto-maisprati.git
+##  trilha de dev full stack jr.
 
-## Passo 2: Abra o VScode (ou outro editor de texto, caso preferir).
-
-## Passo 3: Baixe o Node.
-#### Acesse nodejs.org, baixe o programa e execute o instalador.
-
-## Passo 4: Confira se o node e o npm foi instalado corretamente.
-#### node -v
-#### npm -v
-
-## Passo 5: Navegue até o diretório dos exercícios utilizando o comando cd:
-#### cd projeto-maisprati/Lista-de-exercicios01
-
-## Passo 6: Instale as dependências necessárias:
-#### npm install prompt-sync
-
-## Passo 7: No terminal, execute cada arquivo através do node:
-#### Exemplo: node exercicio1.js
+#### Módulo 1 - Introdução à Lógica de Programação
+#### Módulo 2 - Introdução ao Controle de Versão com Git e Github
+#### Módulo 3 - Fundamentos do Desenvolvimento Front-end
+#### Trilha Complementar: Design para quem não é Designer
+#### Módulo 4 - Desenvolvendo Front-end com ReactJS
+#### Módulo 5 - Introdução à Linguagem Java
+#### Módulo 6 - Fundamentos de Bancos de Dados Relacionais
+#### Módulo 7 - Desenvolvimento de API’s Rest com Spring Boot
+#### Módulo 8 - Laboratório de Projeto Final
