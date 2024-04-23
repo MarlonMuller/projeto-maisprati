@@ -1,4 +1,4 @@
-# Pojeto +PraTi 
+# Projeto +PraTi 
 
 ##  trilha de dev full stack jr.
 
