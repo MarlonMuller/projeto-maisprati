@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "node": "^18.20.2",
-    "prompt-sync": "^4.2.0"
-  }
-}
