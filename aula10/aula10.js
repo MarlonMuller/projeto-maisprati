@@ -159,3 +159,5 @@ function multiplicacao(m, ...p){
 }
 
 console.log(multiplicacao(5, 7, 12, 3, 50))
+
+// Teste
