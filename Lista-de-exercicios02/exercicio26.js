@@ -15,7 +15,7 @@ let B = [
 
 function calcularMatrizProduto(A, B) {
     let linhas = A.length;
-    let colunas = B[0].length;
+    let colunas = A[0].length;
 
     let P = new Array(linhas);
     for (let i = 0; i < linhas; i++) {
@@ -24,9 +24,7 @@ function calcularMatrizProduto(A, B) {
 
     for (let i = 0; i < linhas; i++) {
         for (let j = 0; j < colunas; j++) {
-            for (let k = 0; k < B.length; k++) { // Iterando sobre o número correto de colunas de B
-                P[i][j] += A[i][k] * B[k][j]; // Multiplicação correta das matrizes
-            }
+                P[i][j] += A[i][j] * B[i][j]; // Multiplicação correta das matrizes
         }
     }
 

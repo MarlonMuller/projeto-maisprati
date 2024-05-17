@@ -2,6 +2,8 @@
 multiplicar a matriz M pelo valor A e colocar os valores da matriz multiplicados por A em
 um vetor V(36). Escrever o vetor V no final.*/
 
+const prompt = require('prompt-sync')()
+
 // Função principal
 function main() {
     let matriz = [];

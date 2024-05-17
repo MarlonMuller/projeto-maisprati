@@ -41,6 +41,6 @@ const matriz5x5 = [
 const resultado = calculos(matriz5x5)
 
 console.log(`O resultado da soma da linha 4 é: ${resultado.somaLinha4}`)
-console.log(`O resultado da soma da coluna 2 é:${resultado.somaColuna2}`)
-console.log(`O resultado da soma da diagonal principal é:${resultado.somaDiagonalPrincipal}`)
-console.log(`O resultado de todos os itens da matriz é:${resultado.somaTotal}`)
+console.log(`O resultado da soma da coluna 2 é: ${resultado.somaColuna2}`)
+console.log(`O resultado da soma da diagonal principal é: ${resultado.somaDiagonalPrincipal}`)
+console.log(`O resultado de todos os itens da matriz é: ${resultado.somaTotal}`)
