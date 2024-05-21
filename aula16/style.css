@@ -1,0 +1,67 @@
+
+nav ul {
+    list-style: none;
+
+}
+
+nav ul li {
+    display: inline-block;
+    padding: 3px;
+    font-size: 22px;
+}
+
+
+
+
+#principal {
+    background-color: brown;
+}
+
+
+.cor-paragrafo {
+    color: rgb(82, 189, 20);
+}
+
+#titulos {
+    display: flex;
+    justify-content: center;
+    background: white;
+    font-weight: bolder;
+}
+
+#destaque, a {
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    padding: 1px;
+}
+
+#destaque:hover ,a:hover {
+    color: red;
+    background: white;
+}
+
+#juventude:hover {
+    color: green;
+    background: white;
+}
+
+#caxias:hover {
+    color: purple;
+    background: white;
+}
+
+table {
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+td {
+    color: white;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 3px;
+}
