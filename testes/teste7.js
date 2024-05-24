@@ -13,15 +13,28 @@ Carros de luxo
 const prompt = require('prompt-sync')()
 let tipoCarro = parseInt(prompt('Digite o tipo de carro (1 - popular ou 2 - luxo): '))
 let dias = parseInt(prompt('Digite quantos dias você utilizou o carro: '))
-let kmPercorridos = parseInt(promt('Digite quantos KMs percorridos: '))
+let kmPercorridos = parseInt(prompt('Digite quantos KMs percorridos: '))
+let valorKM = 0
+let valorDiaria = 0
+
 
 if(tipoCarro === 1) {
-    let valorDiaria = dias * 90 
+    valorDiaria = dias * 90 
+    if(kmPercorridos <= 100) {
+        valorKM = kmPercorridos * 0.20
+    } else {
+        valorKM = kmPercorridos * 0.10
+    }
 } else if (tipoCarro === 2) {
-    let valorDiaria = dias * 150
+    valorDiaria = dias * 150
+    if(kmPercorridos  <= 200) {
+        valorKM = kmPercorridos * 0.30
+    } else {
+        valorKM = kmPercorridos * 0.25
+    }
 }
 
-
+console.log(`O valor total é R$ ${(valorDiaria + valorKM).toFixed(2)}`)
 
 
 
