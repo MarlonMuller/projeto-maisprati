@@ -4,4 +4,13 @@
 
 const prompt = require('prompt-sync')()
 
-let distanciaDesejada = prompt('Digite quantos kms você deseja percorrer:')
+let distancia = parseInt(prompt('Digite a distância que você deseja percorrer: '))
+
+let preco
+
+if(distancia <= 200) {
+    preco = distancia * 0.50
+} else {
+    preco = distancia * 0.45    
+}
+console.log(`Sua passagem custará R$ ${preco.toFixed()},00`)
