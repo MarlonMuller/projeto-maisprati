@@ -1,0 +1,25 @@
+* {
+    box-sizing: border-box;
+}
+
+.classePadrao {
+    text-align: center;
+    color: blue;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.classe1 {
+    text-align: right;
+    color: red;
+    font-weight: normal;
+    padding: 20px;
+    border: 2px dashed green;
+}
+
+.classe2 {
+    text-align: left;
+    color: rgb(128, 6, 43);
+    font-weight: normal;
+    border: 2px dashed rgb(0, 81, 128);
+}

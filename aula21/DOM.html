@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript aplicando CSS</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script>
+function trocarEstilizacao(cor) {
+    let div = document.querySelector('div')
+    div.style.backgroundColor = cor
+}
+
+function alterarClasse(classe) {
+    let div = document.querySelector('div')
+    div.className = classe
+}
+    </script>
+</head>
+<body>
+    <h1>Escolha a cor do quadrado</h1>
+    <button type="button" onclick='trocarEstilizacao("orange")'>Laranja</button>
+    <button type="button" onclick='trocarEstilizacao("red")'>Vermelho</button>
+    <button type="button" onclick='trocarEstilizacao("green")'>Verde</button>
+    <button type="button" onclick='trocarEstilizacao("black")'>Preto</button>
+    <br><br>
+    <div style="width: 240px; height: 240px; border: 1px solid black;" class="quadradoPadrao">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde ipsam voluptate temporibus ratione praesentium odio quo enim veritatis neque dolores.</div>
+    <h1>Escolha a classe do quadrado</h1>
+    <button type="button" onclick="alterarClasse('classePadrao')">Classe padrão</button>
+    <button type="button" onclick="alterarClasse('classe1')">Classe 1</button>
+    <button type="button" onclick="alterarClasse('classe2')">Classe 2</button>
+
+</body>
+</html>
