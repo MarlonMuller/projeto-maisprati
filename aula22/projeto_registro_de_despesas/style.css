@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h1, form {
+    margin: 30px 0 30px 20px;
+}
+
+ul {
+    background: blue;
+   
+    list-style: none;
+    display: block;
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+img {
+    width: 30px;
+    padding: 4px;
+}
+
+select, input {
+    height: 40px;
+    display: inline-block;
+    float: left;
+    margin-right: 15px; 
+    margin-bottom: 15px; 
+    width: 200px
+}
+
+input {
+    height: 34px;
+    width: 192px;
+}
+
+#cadastro #cadastro {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+#consulta #consulta {
+    font-weight: bolder;
+    font-size: larger;
+}
