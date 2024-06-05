@@ -1,0 +1,14 @@
+
+header {
+    background-color: #EC268F;
+}
+
+#pesquisa {
+    background-image: url("/assets/images/lupa.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 1.1em;
+    padding-right: 1.3em;
+    width: 20em;
+}
+
