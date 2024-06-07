@@ -5,33 +5,56 @@
 }
 
 header {
+    position: fixed;
+    width: 100%;
     background-color: #EC268F;
-    padding: 10px;
+    overflow: hidden;
 }
 
 img#logo {
     max-width: 90px;
-    display: inline-block;
+    margin-left: 35px;
+    margin-right: 35px;
 }
+
+header a, form  {
+    float: left;
+    margin: 10px 15px 10px 0;
+    
+}
+
+header div#links {
+    float: right;
+}
+
 
 form {
     position: relative;
-    display: inline-block;
-    border: 1px solid black;
     width: 17em;
-    height: 2em;
+    height: 2.5em;
 }
 
 form input {
-    position: absolute;
+    display: inline-block;
     width: 100%;
     height: 100%;
+    padding-left: 0.5em;
+    border-radius: 8px;
+    margin-top: 10px;
+    outline: none;
+    border: none;
 }
 
 form button {
+    display: inline-block;
     position: absolute;
-    right: 10px;
+    right: 0;
+    width: 2em;
+    height: 100%;
     background-color: transparent;
+    border: none;
+    padding: 1.5px;
+    margin-top: 10px;
 }
 
 form button:hover {
@@ -39,33 +62,178 @@ form button:hover {
 }
 
 form img {
-    max-width: 25px;
+    max-width: 20px;
 }
 
-div#conta {
+div#links a{
     display: inline-block;
-}
-
-div#suporte {
-    display: inline-block;
-    padding-left: 10px;
-    max-width: 120px;
-}
-
-
-
-div#carrinho {
-    display: inline-block;
-    max-width: 60px;
-}
-
-a{
     text-decoration: none;
     color: white;
 }
 
+div#links a:hover {
+    color: black;
+}
 
-div {
+div#links {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+div#conta, div#suporte, div#carrinho { 
+    max-width: 120px;
+    display: inline-block;
+    margin: 12px 35px;
+    height: 60px;
+}
+
+div#conta img, div#suporte img, div#carrinho img {
+    display: inline-block;
+    width: 24px;
+}
+
+div#conta span, div#suporte span, div#carrinho span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+div#conta a:hover img {
+    content: url('../images/conta-black.png');
+}
+
+div#suporte a:hover img {
+    content: url('../images/suporte-black.png');
+}
+
+div#carrinho a:hover img {
+    content: url('../images/carrinho-black.png');
+}
+
+/*Estilização do main da página index*/
+
+main#index {
+    background: rgb(238, 230, 230);
+}
+
+main#index div {
+    float: left;
+    /*border: 1px solid black;*/
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+}
+
+main#index div a:hover {
+    color: #EC268F;
+}
+
+main#index a {
+    color: black;
+    text-decoration: none;
+}
+
+main#index img {
+    max-width: 270px;
+}
+
+main#index p {
+    margin: 15px 0;
+}
+
+main#index input#qtd {
+    width: 15%;
+    height: 30px;
+    text-align: center;
+}
+
+main#index input#button {
+    width: 50%;
+    height: 30px;
+    background: #EC268F;
+    color: white;
+    border: none;
+}
+
+main#index input#button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+
+
+
+/*Estilização da página conta*/
+
+#conta header #links #conta a {
+    color: black;
+}
+#conta header #links #conta a img {
+    content: url('../images/conta-black.png');
+}
+
+main#conta {
+    display: inline-block;
+    padding: 100px 150px;
+    background: rgb(238, 230, 230);
+    width: 100%;
+}
+
+main#conta h2 {
+    margin-bottom: 20px;
+    
+}
+
+div#login, div#cadastro {
     border: 1px solid black;
+    display: inline-block;
+    vertical-align: top;
+    width: 30vw;
+    height: 200px;
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 100px;
+    background: rgb(247, 247, 247);
+}
+
+#login label, #cadastro label{
+    display: block;
+    margin: 17px 0;
+}
+
+#login h3, #cadastro h3 {
+    margin-top: 10px;
+}
+
+#cadastro h4 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+div#login input#button, div#cadastro input#button {
+    background-color: #EC268F;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+
+div#login input#button:hover, div#cadastro input#button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+
+
+
+div, span {
+    /*border: 1px solid black;*/
 }
 
