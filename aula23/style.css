@@ -1,0 +1,20 @@
+div {
+    width: 200px;
+    height: 200px;
+    background: green;
+    padding: 35px;
+    box-sizing: content-box;
+    animation-name: teste;
+    animation-duration: 3s;
+
+
+}
+
+@keyframes teste {
+    from {
+        width: 200px;
+    }
+    to {
+        width: 100px;
+    }
+}
