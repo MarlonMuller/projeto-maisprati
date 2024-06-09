@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+}
+
+/* Formatação do header rosa com links */
+
 header {
     position: fixed;
     width: 100%;
@@ -112,15 +118,23 @@ div#carrinho a:hover img {
 /*Estilização do main da página index*/
 
 main#index {
+    padding-top: 5em;
     background: rgb(238, 230, 230);
+    width: 100%;
+
 }
 
 main#index div {
     float: left;
-    /*border: 1px solid black;*/
-    padding: 15px;
-    margin: 15px;
+    padding: 10px;
+    margin: 10px;
     text-align: center;
+    width: 250px;
+    height: 370px;
+}
+
+main#index div:hover {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
 }
 
 main#index div a:hover {
@@ -133,11 +147,11 @@ main#index a {
 }
 
 main#index img {
-    max-width: 270px;
+    max-width: 230px;
 }
 
 main#index p {
-    margin: 15px 0;
+    margin: 10px 0;
 }
 
 main#index input#qtd {
@@ -226,14 +240,24 @@ div#login input#button:hover, div#cadastro input#button:hover {
 
 
 
+/* Estilização do footer */
+div#footer {
+    background: black;
+    color: white;
+    clear: both;
+    padding: 10px;
+}
 
-
+#footer img {
+    width: 150px;
+    
+}
 
 
 
 
 
 div, span {
-    /*border: 1px solid black;*/
+    /* border: 1px solid black; */
 }
 

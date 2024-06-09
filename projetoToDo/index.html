@@ -10,12 +10,12 @@
     <div id="main">
         <form onsubmit="return false;">
             <h1>To Do List</h1>
-            <select id="ano">
+            <select id="year">
                 <option value="">Ano</option>
                 <option value="2024">2024</option>
                 <option value="2023">2023</option>
             </select>
-            <select id="mes">
+            <select id="month">
                 <option value="">Mês</option>
                 <option value="1">Janeiro</option>
                 <option value="2">Fevereiro</option>
@@ -30,8 +30,15 @@
                 <option value="11">Novembro</option>
                 <option value="12">Dezembro</option>
             </select>
-            <input id="dia" type="number" min="1" max="31" placeholder="Dia">
-            <input id="descricao" type="text" placeholder="Descrição">
+            <input id="day" type="number" min="1" max="31" placeholder="Dia">
+            <select id="type">
+                <option value="">Tipo</option>
+                <option value="Home">Home</option>
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Health">Health</option>
+            </select>
+            <input id="description" type="text" placeholder="Descrição">
             <button type="button" onclick="registerTask()">Registrar</button>
         </form>
     </div>
