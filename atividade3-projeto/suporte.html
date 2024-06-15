@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body id="conta">
+<body id="suporte">
     <header>
         <a href="index.html"><img src="assets/images/logo.png" alt="logo-Nails-Art-Duda" id="logo"></a>
         <form>
@@ -41,27 +41,29 @@
     </header>
 
     <main id="conta">
-        <h2>Identificação</h2>
+        <h2>Fale conosco</h2>
         <div id="login">
-            <h3>Ja possuo cadastro</h3>
-            <label for="">E-mail
-                <input type="email">
-            <label for="">Senha
-                <input type="password">
+            <h3>Preencha com seus dados que entraremos em contato</h3>
+            <label for="">
+                <input type="text" placeholder="Nome">
+            </label>  
+            <label for="">
+                <input type="email" placeholder="E-mail">
             </label>
-            <input id="button" type="button" value="Prosseguir" onclick="logar()">
-        </div>
-        <div id="cadastro">
-            <h3>Não possuo cadastro</h3>
-            <h4>Digite seu e-mail para cadastro:</h3>
-            <label for="">E-mail
-                <input type="email">
+            <label for="">
+                <input type="text" placeholder="Telefone">
             </label>
-            <input id="button" type="button" value="Cadastrar" onclick="cadastrar()">
+            <label for="">
+                <input type="text" placeholder="Número Pedido">
+            </label>
+            <label for="">
+                <textarea name="" id="" placeholder="Mensagem"></textarea>
+                
+            </label>
+            <a href="index.html"><input id="buttonFechar" type="button" value="Voltar"></a>
+            <input id="button" type="button" value="Enviar" onclick="enviarFormulario()">
         </div>
-
     </main>
-
     <footer>
         <span id="descricao">
             <p>Descubra a Nails Art Duda, sua loja exclusiva de adesivos de unha 3D! Encontre uma variedade incrível de designs e aproveite as promoções especiais com frete grátis no site.</p>

@@ -15,3 +15,15 @@ function adicionarAoCarrinho(id) {
 
     valorCarrinho.innerHTML = valorTotal
 }
+
+function enviarFormulario() {
+    alert('Dados enviados, em breve entraremos em contato!')
+}
+
+function cadastrar() {
+    alert('E-mail cadastrado com sucesso! Bem vinda(o) a Nails Art Duda!')
+}
+
+function logar() {
+    alert('Login realizado com sucesso! Bem vinda(o) a Nails Art Duda!')
+}
