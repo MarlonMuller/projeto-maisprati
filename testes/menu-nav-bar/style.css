@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    height: 45px;
+    width: 60px;
+}
+
+.navbar {
+    display: flex;
+    background-color: aquamarine;
+}
+
+.navbarItems {
+    display: flex;
+}
+
+.navbarItemsRight {
+    margin-left: auto;
+}
+
+.navbarLinkToggle {
+    display: none;
+}
+
+.navbarLink {
+    padding: 8px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .navbar,
+    .navbarItems {
+        flex-direction: column;
+    }
+
+    .navbarItemsRight {
+        margin-left: 0;
+    }
+
+    .navbarItems {
+        display: none;
+    }
+
+    .navbarLinkToggle {
+        display: initial;
+        align-self: flex-end;
+        position: absolute;
+        cursor: pointer;
+    }
+
+    .navbarToggleShow {
+        display: flex;
+    }
+}
