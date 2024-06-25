@@ -1,29 +1,14 @@
 .navbar {
     display: flex;
-    background-color: antiquewhite;
+    background-color: aquamarine;
 }
 
 .navbarItems {
     display: flex;
-    margin: 15px;
 }
 
 .navbarItemsRight {
     margin-left: auto;
-}
-
-.navLink {
-    padding: 8px;
-}
-
-a  {
-    text-decoration: none;
-    color: blueviolet;
-}
-
-img {
-    height: 65px;
-    width: 75px;
 }
 
 .navbarLinkToggle {
@@ -31,26 +16,20 @@ img {
 }
 
 
-
-
-
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
     .navbar, .navbarItems {
-        display: block;
+        flex-direction: column;
     }
 
-    .navbarItemsRight {
-        margin-left: 0;
-    }
-    
     .navbarItems {
+        margin-left: 0;
         display: none;
     }
 
     .navbarLinkToggle {
-        align-self: flex-end;
         display: initial;
         position: absolute;
+        align-self: flex-end;
         cursor: pointer;
     }
 
@@ -58,3 +37,29 @@ img {
         display: flex;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+.navbarLink {
+    padding: 8px;
+}
+
+a {
+    padding: 8px;
+}
+
+
+img {
+    height: 45px;
+    width: 65px;
+}
+
+
