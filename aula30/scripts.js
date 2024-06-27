@@ -29,7 +29,4 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
         });
     });
-
-    // Load initial content
-    buttons[0].click();
 });
