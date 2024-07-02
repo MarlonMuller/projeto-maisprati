@@ -121,7 +121,8 @@ main#index {
     padding-top: 5em;
     background: rgb(238, 230, 230);
     width: 100%;
-
+    margin-left: 0;
+    margin-right: 0;
 }
 
 main#index div {
@@ -297,7 +298,19 @@ footer {
     background: black;
     color: white;
     clear: both;
-    padding: 10px;
+    margin-top: 15px;
+    padding: 30px;
+    display: flex;
+    gap: 350px;
+}
+
+footer li {
+    list-style: none;
+}
+
+footer li:hover {
+    color: #EC268F;
+    cursor: pointer;
 }
 
 footer span p {
