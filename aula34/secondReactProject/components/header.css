@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+.headerDiv {
+    background-color: red;
+    display: flex;
+    padding: 20px;
+}
+
+.headerDiv img {
+    max-width: 58px;
+    margin-right: 50px;
+}
+
+.headerDiv ul {
+    display: flex;
+    gap: 90px;
+    font-size: 30px;
+}
+
+.headerDiv ul li {
+    list-style-type: none;
+}
+
+.headerDiv ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.headerDiv ul li a:hover {
+    color: black;
+}
