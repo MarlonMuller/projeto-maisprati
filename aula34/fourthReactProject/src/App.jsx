@@ -1,7 +1,10 @@
-
+import TextArea from "./components/TextArea.jsx"
 function App () {
   return (
-    <h1>Ooooooooooooooooooooi</h1>
+    <>
+      <h1>Oi</h1>
+      <TextArea/>
+    </>
   )
 }
 

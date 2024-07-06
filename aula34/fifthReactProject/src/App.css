@@ -1,0 +1,39 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  color: #48D9F3;
+}
+
+.firstDiv {
+  display: flex;
+}
+
+.secondDiv {
+  text-align: start;
+}
+
+.myFirstList {
+  display: flex;
+}
+
+.myFirstList li {
+  list-style: none;
+  padding: 10px;
+  margin: 2px;
+  border: 1px solid white;
+}
+
+.myFirstList li a {
+  text-decoration: none;
+  color: white;
+}
+
+#result {
+  background-color: #2D3942;
+}
+
+#active {
+  background-color: aqua;
+}
