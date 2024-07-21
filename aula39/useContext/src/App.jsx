@@ -1,35 +1,17 @@
-import { useState, createContext, useContext } from 'react'
+import ChildrenOne from './components/ChildrenOne.jsx'
+import {useState} from 'react'
+import {AppContext} from './context/AppContext.jsx'
 
-const AppContext = createContext(null)
 
-function App() {
-  const [name, setName] = useState('teste')
-  
+
+function App () {
+  const [name, setName] = useState('Marlon')
+
   return (
-    <AppContext.Provider value = {{name, setName}}>
-      <div>
-        <h1>{name}</h1>
-      </div>
+    <AppContext.Provider value={{name, setName}} >
+      <h1>{name}</h1>
       <ChildrenOne />
     </AppContext.Provider>
-  )
-}
-
-function ChildrenOne() {
-  return (
-    <ChildrenTwo />
-  )
-
-}
-
-function ChildrenTwo() {
-  const {setName} = useContext(AppContext)
-  return (
-    <div>
-      <h1>Olaa</h1>
-      <button onClick={ () => setName('Marlon') } >Clique aqui para alterar o nome</button>
-    </div>
-
   )
 }
 
