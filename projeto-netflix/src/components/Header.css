@@ -1,0 +1,11 @@
+.header-logo {
+    position: absolute;
+    top: 21px;
+    left: 353px;
+    display: flex;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 45px;
+}
