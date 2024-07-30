@@ -1,3 +1,12 @@
+.login-pai {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
 .login-container {
     background-color: rgba(0, 0, 0, 0.753);
     padding: 40px;
@@ -7,6 +16,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    width: ;
 }
 
 .login-container h1 {
@@ -18,7 +28,7 @@
     flex-direction: column;
 }
 
-.login-container input {
+.login-container form input {
     background: #272727af;
     border: white;
     padding: 15px;
@@ -26,6 +36,7 @@
     border-radius: 5px;
     color: white;
     width: 25em;
+    font-size: 15px;
 }
 
 .login-container button {
@@ -43,17 +54,34 @@
     background: #f6121d;
 }
 
-.login-options {
+.login-option {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
     margin-top: 20px;
     font-size: 0.9em;
 }
 
-.login-options a {
-    color: #b3b3b3;
+.login-option div a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.login-option input {
+    cursor: pointer;
+}
+
+.login-option a {
+    color: rgba(255, 255, 255, 0.952);
     text-decoration: none;
+}
+
+.login-option a:hover {
+    color: #b3b3b3;
+    text-decoration: solid;
 }
 
 .login-signup {
