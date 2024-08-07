@@ -39,7 +39,7 @@
     font-size: 15px;
 }
 
-.login-container button {
+.login-container button.buttonOne {
     background: #e50914;
     border: none;
     padding: 15px;
@@ -50,33 +50,44 @@
     margin-top: 20px;
 }
 
-.login-container button:hover {
-    background: #f6121d;
+.login-container button.buttonOne:hover {
+    background: #8d141a;
+}
+
+.login-container p {
+    align-self: center;
+}
+
+.login-container button.buttonTwo {
+    background: #3d3d3d;
+    border: none;
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button.buttonTwo:hover {
+    opacity: 0.6;
 }
 
 .login-option {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
     font-size: 0.9em;
-}
-
-.login-option div a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 15px;
 }
 
 .login-option input {
     cursor: pointer;
+    border: white;
 }
 
 .login-option a {
     color: rgba(255, 255, 255, 0.952);
     text-decoration: none;
+    display: flex;
+    align-self: center;
 }
 
 .login-option a:hover {
