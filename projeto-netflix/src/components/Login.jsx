@@ -21,6 +21,7 @@ function Login() {
                 </div>
                 <div className='login-signup'>
                     <p>Novo por aqui? <a href="#">Assine agora</a> </p>
+                    <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um bot. <a id='saberMais' href="#">Saber mais.</a></p>
                 </div>
             </div>
         </div>

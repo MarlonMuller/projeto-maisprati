@@ -1,6 +1,35 @@
 .footer {
     background-color: red;
     box-sizing: border-box;
-    padding: 10px;
+    padding: 20px 380px;
     margin: 0;
+}
+
+div.footer > div.container {
+    display: flex;
+    gap: 150px;
+}
+
+
+
+div.footer > div.container > div {
+    border: 2px solid green;
+}
+
+div.footer > div.container > div > ul {
+    border: 2px solid black;
+    padding: 0;
+    margin: 0;
+}
+
+
+div.footer > div.container > div > ul > li {
+    color: white;
+    list-style: none;
+    margin: 10px 0;
+}
+
+div.footer > div.container > div > ul > select {
+    padding: 10px;
+    font-size: 1em;
 }

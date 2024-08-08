@@ -13,10 +13,10 @@
     border-radius: 5px;
     width: 25em;
     height: 40em;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: ;
 }
 
 .login-container h1 {
@@ -30,11 +30,12 @@
 
 .login-container form input {
     background: #272727af;
-    border: white;
+    border: 2px solid white !important;
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
     color: white;
+    font-weight: bold;
     width: 25em;
     font-size: 15px;
 }
@@ -76,23 +77,29 @@
     display: flex;
     flex-direction: column;
     font-size: 0.9em;
+    align-items: center;
+    width: 100%;
 }
 
 .login-option input {
     cursor: pointer;
-    border: white;
 }
 
 .login-option a {
     color: rgba(255, 255, 255, 0.952);
     text-decoration: none;
-    display: flex;
-    align-self: center;
+    margin: 20px 0;
+    font-size: 1.2em;
 }
 
 .login-option a:hover {
     color: #b3b3b3;
     text-decoration: solid;
+}
+
+.login-option div {
+    display: flex;
+    align-self: flex-start;
 }
 
 .login-signup {
@@ -104,4 +111,8 @@
     color: white;
     font-weight: bold;
     text-decoration: none;
+}
+
+#saberMais {
+    color: #0139DD;
 }
