@@ -1,5 +1,3 @@
-import { title } from "process";
-
 const API_KEY = 'e4e6aba7164541b4c6087f6cf4d31c1e';
 const API_BASE = 'https://api.themoviedb.org/3';
 
@@ -20,38 +18,38 @@ export default {
             },
             {
                 slug: 'trending',
-                title: 'Recomendadso para você',
-                items: []
+                title: 'Recomendados para você',
+                items: await basicFetch(`/trending/all/week?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'toprated',
                 tilte: 'Em alta',
-                items: []
+                items: await basicFetch(`/movie/top_rated?language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'action',
                 title: 'Ação',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=28&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'comedy',
                 title: 'Comédia',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=35&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'horror',
                 title: 'Terror',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=27&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'romance',
                 title: 'Romance',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=10749&language=pt-BR&api_key=${API_KEY}`)
             },
             {
                 slug: 'documentary',
                 title: 'Documentários',
-                items: []
+                items: await basicFetch(`/discover/movie?with_genres=99&language=pt-BR&api_key=${API_KEY}`)
             }
         ]
     }
