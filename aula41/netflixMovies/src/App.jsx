@@ -26,11 +26,7 @@ export default () => {
       setFeaturedData(chosenInfo);
       console.log(chosen);
       console.log(chosenInfo);
-
-
-
     }
-
 
     loadAll();
   }, []);

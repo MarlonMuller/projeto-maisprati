@@ -12,7 +12,6 @@ export default ({ title, items }) => {
             x = 0;
         }
         setScrollX(x);
-
     }
 
     const handleRightArrow = () => {
