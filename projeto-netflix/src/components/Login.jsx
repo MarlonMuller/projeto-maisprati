@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './Login.css'
+import HeaderLogin from './HeaderLogin'
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -13,15 +14,20 @@ function Login() {
             navigate('/principal');
         } else {
             alert("usuário ou senha incorretos!")
+            let pErro = document.getElementById("erro");
+            pErro.textContent = `Senha incorreta para ${username}. Você pode usar um código de acesso, redefinir sua senha ou tentar novamente.`
         }
     }
 
 
 
     return (
+        <>
+        <HeaderLogin />
         <div className='login-pai'>
             <div className="login-container">
                 <h1>Entrar</h1>
+                <p id='erro'></p>
                 <form onSubmit={handleLogin}>
                     <input 
                         type="text" 
@@ -52,6 +58,7 @@ function Login() {
                 </div>
             </div>
         </div>
+        </>
     )
 }
 

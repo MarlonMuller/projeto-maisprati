@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <>
-        { <HeaderLogin /> }
+        {/* { <HeaderLogin /> } */}
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/principal' element={<Principal />} />
