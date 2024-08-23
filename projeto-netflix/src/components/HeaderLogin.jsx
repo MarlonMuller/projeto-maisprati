@@ -1,8 +1,8 @@
 import Logo from '../assets/logo-netflix.png'
-import './Header.css'
+import './HeaderLogin.css'
 
 
-function Header () {
+function HeaderLogin () {
     return (
         <a href="#" className="header-logo">
             <img src={Logo} alt="netflix" />
@@ -10,4 +10,4 @@ function Header () {
     )
 }
 
-export default Header
+export default HeaderLogin

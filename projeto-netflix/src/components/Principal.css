@@ -5,19 +5,14 @@
 }
 
 body {
-    background-color: #111;
-    color: #fff;
+    background-color: #1ecb35;
+    color: white;
     margin: 0;
     font-family: "Roboto", sans-serif;
 }
 
 .lists {
     margin-top: -100px;
-}
-
-footer {
-    margin: 50px 0;
-    text-align: center;
 }
 
 .loading {
@@ -27,7 +22,7 @@ footer {
     right: 0;
     bottom: 0;
     z-index: 99;
-    background-color: #000;
+    background-color: #e81212;
     display: flex;
     justify-content: center;
     align-items: center;

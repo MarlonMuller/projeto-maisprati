@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './Principal.css'
+// import './Principal.css'
 import Tmdb from '../Tmdb'
 import MovieRow from '../components/MovieRow'
 import FeaturedMovie from '../components/FeaturedMovie';
@@ -61,11 +61,6 @@ export default () => {
           <MovieRow key={key} title={item.title} items={item.items} />
         ))}
       </section>
-
-      <footer>
-        Atividade 5 - Marlon Muller <br />
-        Dados TMDB
-      </footer>
 
       {movieList.length <= 0 &&
         <div className='loading'>

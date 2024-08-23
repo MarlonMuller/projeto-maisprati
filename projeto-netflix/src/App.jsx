@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
+import HeaderLogin from './components/HeaderLogin';
 import Login from './components/Login';
 import Footer from './components/Footer';
 import Principal from './components/Principal'
@@ -11,7 +11,7 @@ function App() {
   return (
     <Router>
       <>
-        <Header />
+        { <HeaderLogin /> }
         <Routes>
           <Route path='/' element={<Login />} />
           <Route path='/principal' element={<Principal />} />
