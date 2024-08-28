@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Tmdb from "../Tmdb";
+import HeaderPrincipal from "../components/HeaderPrincipal";
 import "./MovieDetails.css";
 
 const MovieDetails = () => {
@@ -46,21 +47,24 @@ const MovieDetails = () => {
   const cast = movie.cast || [];
 
   return (
-    <div className="movie-details">
-      <h1>{title}</h1>
-      <p>{overview}</p>
-      {backdropPath && <img src={backdropPath} alt={title} />}
-      <p>Avaliação: {rating}</p>
-      <p>Data de Lançamento: {formattedReleaseDate}</p>
-      <h3>Elenco:</h3>
-      <ul>
-        {cast.map((actor, index) => (
-          <li key={index}>
-            {actor.name} como {actor.character}
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <HeaderPrincipal />
+      <div className="movie-details">
+        <h1>{title}</h1>
+        <p>{overview}</p>
+        {backdropPath && <img src={backdropPath} alt={title} />}
+        <p>Avaliação: {rating}</p>
+        <p>Data de Lançamento: {formattedReleaseDate}</p>
+        <h3>Elenco:</h3>
+        <ul>
+          {cast.map((actor, index) => (
+            <li key={index}>
+              {actor.name} como {actor.character}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </>
   );
 };
 
