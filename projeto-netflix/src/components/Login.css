@@ -1,135 +1,163 @@
 .login-pai {
-    background-image: url(../assets/fundo-netflix.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-  
-    margin: 0;
-  } 
-
-.login-pai {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+  background-image: url(../assets/fundo-netflix.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
 }
 
 .login-container {
-    background-color: rgba(0, 0, 0, 0.884);
-    padding: 40px;
-    border-radius: 5px;
-    width: 22em;
-    height: 40em;
-    max-width: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  background-color: rgba(0, 0, 0, 0.884);
+  padding: 40px;
+  border-radius: 5px;
+  width: 90%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.login-container form input,
+.login-container button.buttonOne,
+.login-container button.buttonTwo {
+  width: 90%;
+  font-size: 1rem;
 }
 
 .login-container h1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .login-container form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .login-container form input {
-    background: #272727af;
-    border: 2px solid white !important;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    color: white;
-    font-weight: bold;
-    width: 21em;
-    font-size: 15px;
+  background: #272727af;
+  border: 2px solid white !important;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  width: 80%;
+  font-size: 15px;
 }
 
 .login-container button.buttonOne {
-    background: #e50914;
-    border: none;
-    padding: 15px;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
-    width: 21em;
+  background: #e50914;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  width: 21em;
 }
 
 .login-container button.buttonOne:hover {
-    background: #8d141a;
+  background: #8d141a;
 }
 
 .login-container p {
-    align-self: center;
+  align-self: center;
 }
 
 .login-container button.buttonTwo {
-    background: #3d3d3d;
-    border: none;
-    padding: 15px;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 21em;
+  background: #3d3d3d;
+  border: none;
+  padding: 15px;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 21em;
 }
 
 .login-container button.buttonTwo:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .login-option {
-    display: flex;
-    flex-direction: column;
-    font-size: 0.9em;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9em;
+  align-items: center;
+  width: 100%;
 }
 
 .login-option input {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .login-option a {
-    color: rgba(255, 255, 255, 0.952);
-    text-decoration: none;
-    margin: 20px 0;
-    font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.952);
+  text-decoration: none;
+  margin: 20px 0;
+  font-size: 1.2em;
 }
 
 .login-option a:hover {
-    color: #b3b3b3;
-    text-decoration: solid;
+  color: #b3b3b3;
+  text-decoration: solid;
 }
 
 .login-option div {
-    display: flex;
-    align-self: flex-start;
+  display: flex;
+  align-self: flex-start;
 }
 
 .login-signup {
-    margin-top: 20px;
-    font-size: 0.9em;
+  margin-top: 20px;
+  font-size: 0.9em;
 }
 
 .login-signup a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 #saberMais {
-    color: #0139DD;
+  color: #0139dd;
 }
 
 #erro {
-    background-color: #D89D31;
-    color: black;
+  background-color: #d89d31;
+  color: black;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 20px; /* Reduz o padding em telas menores */
+  }
+
+  .header-logo {
+    top: 10px;
+    left: 10px;
+  }
+
+  .login-container form input,
+  .login-container button.buttonOne,
+  .login-container button.buttonTwo {
+    font-size: 0.875rem; /* Ajusta o tamanho da fonte em telas menores */
+  }
+
+  .login-container h1 {
+    font-size: 1.5rem; /* Ajusta o tamanho do título */
+  }
+
+  .login-option a {
+    font-size: 1rem; /* Ajusta o tamanho do texto do link */
+  }
 }
