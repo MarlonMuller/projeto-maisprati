@@ -20,7 +20,7 @@ import {
   FaBars,
   FaArrowLeft,
 } from "react-icons/fa";
-import QRCodeGenerator from "./components/QRCodeGenerator";
+import QRCodeGenerator from "./components/QRCodeGenarator";
 import IPAddressFinder from "./components/IPAddressFinder";
 import MovieSearchEngine from "./components/MovieSearchEngine";
 import TodoApp from "./components/TodoApp";

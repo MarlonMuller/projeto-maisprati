@@ -3,7 +3,7 @@ import { useState } from 'react';
 // Importa a biblioteca styled-components para criar componentes estilizados.
 import styled from 'styled-components';
 // Importa o componente QRCode da biblioteca qrcode.react para gerar códigos QR.
-import QRCode from 'qrcode.react';
+import { QRCodeSVG } from 'qrcode.react';
 
 // Cria um componente estilizado chamado Container usando styled-components.
 // Esse componente estiliza uma <div> com flexbox para centralizar o conteúdo e adicionar padding, bordas, e sombras.
@@ -78,7 +78,7 @@ const QRCodeGenerator = () => {
       {/* Renderiza o QRCode apenas se 'text' não estiver vazio */}
       {text && (
         <QRCodeContainer>
-          <QRCode value={text} size={256} /> {/* Gera o QR Code com o texto atual e tamanho 256px */}
+          <QRCodeSVG value={text} size={256} /> {/* Gera o QR Code com o texto atual e tamanho 256px */}
         </QRCodeContainer>
       )}
     </Container>
