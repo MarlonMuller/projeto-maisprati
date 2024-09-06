@@ -1,32 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
-import Container from './Container' // Importa o component Container estilizado
-import Button from './Button' // Importa o component Button estilizado
-
-// Define o componente estilizado Title usando styled-components.
-const Title = styled.h2`
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
-  text-align: center;
-`;
-
-// Define o componente estilizado Input usando styled-components.
-const Input = styled.input`
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  transition: border-color 0.3s;
-
-  &:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-`;
+import Container from '../components/Container'; // Importa o component Container estilizado
+import Button from '../components/Button'; // Importa o component Button estilizado
+import Title from '../components/Title'; // Importa o component título estilizado
+import Input from '../components/Input'; // Importa o component input estilizado
 
 // Define o componente estilizado TaskList usando styled-components.
 const TaskList = styled.ul`
@@ -66,35 +43,26 @@ const TaskItem = styled.li`
   }
 `;
 
-// Define o componente estilizado EditInput usando styled-components.
-const EditInput = styled.input`
-  margin-left: 10px;
-  padding: 6px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 60%;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
-  transition: border-color 0.3s;
-
-  &:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-`;
-
 // Define o componente funcional TodoApp.
 const TodoApp = () => {
   const [task, setTask] = useState('');
   const [tasks, setTasks] = useState([]);
   const [editingTaskId, setEditingTaskId] = useState(null);
   const [editingTaskText, setEditingTaskText] = useState('');
+  const inputRef = useRef(null); // Referência para o input de edição
 
   // Usa useEffect para carregar as tarefas do LocalStorage ao montar o componente.
   useEffect(() => {
     const storedTasks = JSON.parse(localStorage.getItem('tasks')) || [];
     setTasks(storedTasks);
   }, []);
+
+  // Usa useEffect para focar automaticamente no input de edição quando uma tarefa estiver sendo editada.
+  useEffect(() => {
+    if (editingTaskId !== null && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [editingTaskId]);
 
   // Função que salva as tarefas no LocalStorage.
   const saveTasksToLocalStorage = (tasks) => {
@@ -103,12 +71,12 @@ const TodoApp = () => {
 
   // Função que adiciona uma nova tarefa.
   const addTask = () => {
-    if (task) {
-      const newTask = { id: Date.now(), text: task }; // Usa Date.now() para gerar um ID único.
+    if (task.trim() !== '') { // Verifica se a tarefa não está vazia
+      const newTask = { id: Date.now(), text: task.trim() }; // Usa Date.now() para gerar um ID único e remove espaços extras
       const updatedTasks = [...tasks, newTask];
       setTasks(updatedTasks);
       saveTasksToLocalStorage(updatedTasks);
-      setTask('');
+      setTask(''); // Limpa o campo de input após adicionar a tarefa
     }
   };
 
@@ -127,13 +95,22 @@ const TodoApp = () => {
 
   // Função que atualiza uma tarefa existente.
   const updateTask = () => {
-    const updatedTasks = tasks.map(task =>
-      task.id === editingTaskId ? { ...task, text: editingTaskText } : task
-    );
-    setTasks(updatedTasks);
-    saveTasksToLocalStorage(updatedTasks);
-    setEditingTaskId(null);
-    setEditingTaskText('');
+    if (editingTaskText.trim() !== '') { // Verifica se o texto editado não está vazio
+      const updatedTasks = tasks.map(task =>
+        task.id === editingTaskId ? { ...task, text: editingTaskText.trim() } : task
+      );
+      setTasks(updatedTasks);
+      saveTasksToLocalStorage(updatedTasks);
+      setEditingTaskId(null);
+      setEditingTaskText('');
+    }
+  };
+
+  // Função que adiciona uma tarefa ao pressionar Enter
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      editingTaskId !== null ? updateTask() : addTask();
+    }
   };
 
   // Retorna o JSX que define o layout e comportamento do componente.
@@ -144,6 +121,7 @@ const TodoApp = () => {
         type="text"
         value={task}
         onChange={(e) => setTask(e.target.value)}
+        onKeyPress={handleKeyPress}
         placeholder="Add a new task"
       />
       <Button onClick={addTask}>Add Task</Button>
@@ -151,11 +129,13 @@ const TodoApp = () => {
         {tasks.map((task) => (
           <TaskItem key={task.id}>
             {editingTaskId === task.id ? (
-              <EditInput
+              <Input
                 type="text"
+                ref={inputRef} // Define a referência para o input de edição
                 value={editingTaskText}
                 onChange={(e) => setEditingTaskText(e.target.value)}
                 onBlur={updateTask}
+                onKeyPress={handleKeyPress} // Permite salvar a edição ao pressionar Enter
               />
             ) : (
               <>

@@ -1,6 +1,7 @@
-/* Cria um componente estilizado chamado Container usando styled-components.
-Esse componente estiliza uma <div> com flexbox para centralizar o conteúdo e adicionar padding, bordas, e sombras.*/
 import styled from 'styled-components'; // Importa styled-components para estilizar
+
+// Cria um componente estilizado chamado Container usando styled-components.
+// Esse componente estiliza uma <div> com flexbox para centralizar o conteúdo e adicionar padding, bordas, e sombras.
 
 const Container = styled.div`
   display: flex; // Define o layout como flexbox.

@@ -1,33 +1,11 @@
 import { useState } from 'react'; // Importa o hook useState do React
-import axios from 'axios'; // Importa a biblioteca axios para fazer requisições HTTP
 import styled from 'styled-components'; // Importa styled-components para estilizar os componentes
-import Container from './Container' // Importa o component Container estilizado
-import Button from './Button' // Importa o component Button estilizado
-
-// Define o estilo do título
-const Title = styled.h2`
-  color: #333;
-  margin-bottom: 20px;
-  font-size: 24px;
-  text-align: center;
-`;
-
-// Define o estilo do campo de entrada
-const Input = styled.input`
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 100%;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
-  font-size: 16px;
-  transition: border-color 0.3s;
-
-  &:focus {
-    border-color: #007bff;
-    outline: none;
-  }
-`;
+import SearchMovies from '../services/SearchMovies'
+import Container from '../components/Container' // Importa o component Container estilizado
+import Button from '../components/Button' // Importa o component Button estilizado
+import Title from '../components/Title' // Importa o component título estilizado
+import Input from '../components/Input' // Importa o component input estilizado
+import ErrorMessage from '../components/ErrorMessage'; // Importa o componente para exibir erros
 
 // Define o estilo do container dos filmes
 const MoviesContainer = styled.div`
@@ -78,14 +56,16 @@ const MovieCard = styled.div`
 const MovieSearchEngine = () => {
   const [query, setQuery] = useState(''); // Define o estado para a consulta de busca
   const [movies, setMovies] = useState([]); // Define o estado para armazenar os filmes
+  const [error, setError] = useState(null); // Define o estado para armazenar erros
+  const [loading, setLoading] = useState(false); // Estado para exibir o carregamento
 
-  // Função para buscar filmes
-  const searchMovies = async () => {
+  const handleSearch = async () => {
+    setError(null); // Limpa qualquer erro anterior
+    setLoading(true); // Ativa o estado de carregamento
     try {
-      const response = await axios.get(`http://www.omdbapi.com/?s=${query}&apikey=403abbfe`); // Faz uma requisição GET para a API OMDB
-      setMovies(response.data.Search); // Armazena os dados dos filmes no estado movies
-    } catch (error) {
-      console.error("Error fetching movie data:", error); // Exibe um erro no console em caso de falha
+      await SearchMovies(query, setMovies, setError);
+    } finally {
+      setLoading(false); // Desativa o estado de carregamento após a busca
     }
   };
 
@@ -98,15 +78,22 @@ const MovieSearchEngine = () => {
         onChange={(e) => setQuery(e.target.value)} // Atualiza o estado query conforme o usuário digita
         placeholder="Search for a movie" // Placeholder do campo de entrada
       />
-      <Button onClick={searchMovies}>Search</Button> {/* Botão que chama a função searchMovies quando clicado */}
+      <Button onClick={handleSearch} disabled={loading || !query}>
+        {loading ? 'Searching...' : 'Search'}
+      </Button>
+      {error && <ErrorMessage>{error}</ErrorMessage>} {/* Exibe mensagem de erro, se houver */}
       <MoviesContainer>
-        {movies && movies.map((movie) => ( // Verifica se há filmes e os mapeia para exibir MovieCard
-          <MovieCard key={movie.imdbID}>
-            <img src={movie.Poster} alt={`${movie.Title} Poster`} /> {/* Exibe o pôster do filme */}
-            <h3>{movie.Title}</h3> {/* Exibe o título do filme */}
-            <p>{movie.Year}</p> {/* Exibe o ano do filme */}
-          </MovieCard>
-        ))}
+        {movies && movies.length > 0 ? (
+          movies.map((movie) => ( // Verifica se há filmes e os mapeia para exibir MovieCard
+            <MovieCard key={movie.imdbID}>
+              <img src={movie.Poster} alt={`${movie.Title} Poster`} /> {/* Exibe o pôster do filme */}
+              <h3>{movie.Title}</h3> {/* Exibe o título do filme */}
+              <p>{movie.Year}</p> {/* Exibe o ano do filme */}
+            </MovieCard>
+          ))
+        ) : (
+          !loading && !error && <p>No movies found.</p> // Exibe mensagem quando não há filmes
+        )}
       </MoviesContainer>
     </Container>
   );

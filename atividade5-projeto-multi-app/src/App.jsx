@@ -1,28 +1,16 @@
 // Importa hooks e componentes do React e bibliotecas externas.
 import { useState, useEffect } from "react";
-import {
-  useNavigate,
-  Link,
-} from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
 import styled from "styled-components";
-import {
-  FaQrcode,
-  FaSearch,
-  FaTasks,
-  FaRegQuestionCircle,
-  FaGlobeAmericas,
-  FaNetworkWired,
-  FaBars,
-  FaArrowLeft,
-} from "react-icons/fa";
-import QRCodeGenerator from "./components/QRCodeGenarator";
-import IPAddressFinder from "./components/IPAddressFinder";
-import MovieSearchEngine from "./components/MovieSearchEngine";
-import TodoApp from "./components/TodoApp";
-import QuizApp from "./components/QuizApp";
-import LanguageTranslator from "./components/LanguageTranslator";
-import Login from "./components/Login";
+import { FaQrcode, FaSearch, FaTasks, FaRegQuestionCircle, FaGlobeAmericas, FaNetworkWired, FaBars, FaArrowLeft } from "react-icons/fa";
+import QRCodeGenerator from "./pages/QRCodeGenarator";
+import IPAddressFinder from "./pages/IPAddressFinder";
+import MovieSearchEngine from "./pages/MovieSearchEngine";
+import TodoApp from "./pages/TodoApp";
+import QuizApp from "./pages/QuizApp";
+import LanguageTranslator from "./pages/LanguageTranslator";
+import Login from "./pages/Login";
 import "../src/styles/App.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 

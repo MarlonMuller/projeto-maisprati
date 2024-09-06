@@ -1,16 +1,9 @@
 import { useState } from 'react'; // Importa o hook useState do React
 import styled from 'styled-components'; // Importa styled-components para estilizar os componentes
-import Button from './Button' // Importa o component Button estilizado
-
-// Define o estilo do container principal do login
-const LoginContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-`;
+import Container from '../components/Container' // Importa o component Container estilizado
+import Button from '../components/Button' // Importa o component Button estilizado
+import Title from '../components/Title' // Importa o component título estilizado
+import Input from '../components/Input' // Importa o component input estilizado
 
 // Define o estilo do formulário de login
 const LoginForm = styled.form`
@@ -23,17 +16,7 @@ const LoginForm = styled.form`
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 `;
 
-// Define o estilo do campo de entrada
-const Input = styled.input`
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  width: 200px;
-`;
-
 // Componente principal de Login
-// eslint-disable-next-line react/prop-types
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState(''); // Define o estado para o nome de usuário
   const [password, setPassword] = useState(''); // Define o estado para a senha
@@ -49,9 +32,9 @@ const Login = ({ onLogin }) => {
   };
 
   return (
-    <LoginContainer>
+    <Container>
       <LoginForm onSubmit={handleSubmit}>
-        <h2>Login</h2>
+        <Title>Login</Title>
         <Input
           type="text"
           value={username} // Valor do campo de entrada é ligado ao estado username
@@ -66,7 +49,7 @@ const Login = ({ onLogin }) => {
         />
         <Button type="submit">Login</Button> {/* Botão que envia o formulário */}
       </LoginForm>
-    </LoginContainer>
+    </Container>
   );
 };
 
