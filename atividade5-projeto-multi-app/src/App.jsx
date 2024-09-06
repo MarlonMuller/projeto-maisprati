@@ -1,11 +1,7 @@
 // Importa hooks e componentes do React e bibliotecas externas.
 import { useState, useEffect } from "react";
 import {
-  Route,
-  Routes,
-  Navigate,
   useNavigate,
-  useLocation,
   Link,
 } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
@@ -27,7 +23,7 @@ import TodoApp from "./components/TodoApp";
 import QuizApp from "./components/QuizApp";
 import LanguageTranslator from "./components/LanguageTranslator";
 import Login from "./components/Login";
-import "./App.css";
+import "../src/styles/App.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 // Estiliza o contêiner principal do aplicativo.
@@ -83,7 +79,7 @@ const NavBar = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    display: ${({ $isOpen }) => ($isOpen ? "flex" : "none")};
   }
 `;
 
@@ -277,7 +273,7 @@ const App = () => {
         </MainContent>
       ) : (
         <>
-          <NavBar isOpen={isNavBarOpen}>
+          <NavBar $isOpen={isNavBarOpen}>
             <StyledLink onClick={() => handleAccess(0, "QRCodeGenerator")}>
               <FaQrcode />
               QR Code Generator
@@ -331,6 +327,7 @@ const App = () => {
                   interval={5000}
                   selectedItem={carouselIndex}
                   onChange={(index) => setCarouselIndex(index)}
+                  showThumbs={false}
                 >
                   <CarouselItem>
                     <h2>QR Code Generator</h2>

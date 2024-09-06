@@ -1,19 +1,8 @@
 import { useState } from 'react'; // Importa o hook useState do React
 import axios from 'axios'; // Importa a biblioteca axios para fazer requisições HTTP
 import styled from 'styled-components'; // Importa styled-components para estilizar os componentes
-
-// Define o estilo do container principal
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  max-width: 800px;
-  margin: 50px auto;
-`;
+import Container from './Container' // Importa o component Container estilizado
+import Button from './Button' // Importa o component Button estilizado
 
 // Define o estilo do título
 const Title = styled.h2`
@@ -37,22 +26,6 @@ const Input = styled.input`
   &:focus {
     border-color: #007bff;
     outline: none;
-  }
-`;
-
-// Define o estilo do botão
-const Button = styled.button`
-  padding: 12px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
-
-  &:hover {
-    background-color: #0056b3;
   }
 `;
 

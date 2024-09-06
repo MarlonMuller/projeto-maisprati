@@ -1,5 +1,6 @@
 import { useState } from 'react'; // Importa o hook useState do React
 import styled from 'styled-components'; // Importa styled-components para estilizar os componentes
+import Button from './Button' // Importa o component Button estilizado
 
 // Define o estilo do container principal do login
 const LoginContainer = styled.div`
@@ -29,20 +30,6 @@ const Input = styled.input`
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 200px;
-`;
-
-// Define o estilo do botão
-const Button = styled.button`
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 `;
 
 // Componente principal de Login
