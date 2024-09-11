@@ -1,7 +1,10 @@
 import React, { useRef, useState, useEffect } from "react";
 import styled from "styled-components";
 import ProductCard from "./ProductCard";
-import ps5controlImage from '../assets/ps5control.png'
+import ps5controlImage from '../assets/ps5control.png';
+import tvImage from '../assets/tv.png';
+import notebookImage from '../assets/notebook.png';
+import geladeiraImage from '../assets/geladeira.png'
 
 const FlashSalesContainer = styled.div`
   width: 100%;
@@ -84,6 +87,10 @@ const ProductsCarousel = styled.div`
   -ms-overflow-style: none;  /* Oculta a barra de rolagem no IE e Edge */
   scrollbar-width: none;  /* Oculta a barra de rolagem no Firefox */
 
+  img {
+    max-height: 120px; // Limita a altura da imagem para padronizar
+  }
+
   &::-webkit-scrollbar {
     display: none;  /* Oculta a barra de rolagem no Chrome, Safari e Opera */
   }
@@ -102,7 +109,7 @@ const products = [
   {
     id: 2,
     title: "AK-900 Wired Keyboard",
-    image: "https://via.placeholder.com/150",
+    image: tvImage,
     discountPrice: "R$60",
     originalPrice: "R$100",
     discount: "-35%",
@@ -111,7 +118,7 @@ const products = [
   {
     id: 3,
     title: "IPS LCD Gaming Monitor",
-    image: "https://via.placeholder.com/150",
+    image: notebookImage,
     discountPrice: "R$370",
     originalPrice: "R$400",
     discount: "-30%",
@@ -120,7 +127,7 @@ const products = [
   {
     id: 4,
     title: "S-Series Comfort Chair",
-    image: "https://via.placeholder.com/150",
+    image: geladeiraImage,
     discountPrice: "R$375",
     originalPrice: "R$400",
     discount: "-25%",
@@ -129,7 +136,7 @@ const products = [
   {
     id: 5,
     title: "Wireless Gaming Mouse",
-    image: "https://via.placeholder.com/150",
+    image: ps5controlImage,
     discountPrice: "R$45",
     originalPrice: "R$60",
     discount: "-25%",
@@ -138,7 +145,7 @@ const products = [
   {
     id: 6,
     title: "Gaming Headset",
-    image: "https://via.placeholder.com/150",
+    image: ps5controlImage,
     discountPrice: "R$85",
     originalPrice: "R$120",
     discount: "-30%",
@@ -147,7 +154,7 @@ const products = [
   {
     id: 7,
     title: "AK-900 Wired Keyboard",
-    image: "https://via.placeholder.com/150",
+    image: geladeiraImage,
     discountPrice: "R$60",
     originalPrice: "R$100",
     discount: "-35%",
@@ -156,7 +163,7 @@ const products = [
   {
     id: 8,
     title: "IPS LCD Gaming Monitor",
-    image: "https://via.placeholder.com/150",
+    image: notebookImage,
     discountPrice: "R$370",
     originalPrice: "R$400",
     discount: "-30%",
@@ -165,7 +172,16 @@ const products = [
   {
     id: 9,
     title: "S-Series Comfort Chair",
-    image: "https://via.placeholder.com/150",
+    image: geladeiraImage,
+    discountPrice: "R$375",
+    originalPrice: "R$400",
+    discount: "-25%",
+    reviewCount: 99,
+  },
+  {
+    id: 10,
+    title: "S-Series Comfort Chair",
+    image: geladeiraImage,
     discountPrice: "R$375",
     originalPrice: "R$400",
     discount: "-25%",

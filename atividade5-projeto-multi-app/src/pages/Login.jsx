@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { useState } from 'react'; // Importa o hook useState do React
 import styled from 'styled-components'; // Importa styled-components para estilizar os componentes
 import Container from '../components/Container' // Importa o component Container estilizado
@@ -22,12 +23,20 @@ const Login = ({ onLogin }) => {
   const [password, setPassword] = useState(''); // Define o estado para a senha
 
   // Função para lidar com o envio do formulário
-  const handleSubmit = (e) => {
-    e.preventDefault(); // Previne o comportamento padrão do formulário
-    if (username === 'admin' && password === 'password') {
-      onLogin(); // Chama a função onLogin passada como prop se as credenciais estiverem corretas
-    } else {
-      alert('Invalid credentials'); // Exibe um alerta se as credenciais estiverem incorretas
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('URL_DA_SUA_API/login', { username, password });
+      const { token, refreshToken } = response.data;
+
+      // Armazenar os tokens no localStorage
+      localStorage.setItem('token', token);
+      localStorage.setItem('refreshToken', refreshToken);
+
+      // Chamar a função onLogin para atualizar o estado global da aplicação
+      onLogin();
+    } catch (error) {
+      alert('Login failed: Invalid credentials');
     }
   };
 
@@ -37,20 +46,20 @@ const Login = ({ onLogin }) => {
         <Title>Login</Title>
         <Input
           type="text"
-          value={username} // Valor do campo de entrada é ligado ao estado username
-          onChange={(e) => setUsername(e.target.value)} // Atualiza o estado username conforme o usuário digita
-          placeholder="Username" // Placeholder do campo de entrada
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
+          placeholder="Username"
         />
         <Input
           type="password"
-          value={password} // Valor do campo de entrada é ligado ao estado password
-          onChange={(e) => setPassword(e.target.value)} // Atualiza o estado password conforme o usuário digita
-          placeholder="Password" // Placeholder do campo de entrada
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
         />
-        <Button type="submit">Login</Button> {/* Botão que envia o formulário */}
+        <Button type="submit">Login</Button>
       </LoginForm>
     </Container>
   );
 };
 
-export default Login; // Exporta o componente Login como padrão
+export default Login;
