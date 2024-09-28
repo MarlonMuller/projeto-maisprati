@@ -1,4 +1,4 @@
-package com.example.api2_user.security;
+package com.example.api2_user.service;
 
 import com.example.api2_user.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,6 @@ import com.example.api2_user.model.User;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-
 
 @Service
 public class UserService {
@@ -33,6 +32,7 @@ public class UserService {
     public UserDTO createUser(UserDTO userDTO){
         User user = new User();
         user.setUsername(userDTO.getUsername());
+        user.setPassword(userDTO.getPassword());
         user.setEmail(userDTO.getEmail());
         user.setRole(userDTO.getRole());
         userRepository.save(user);
@@ -57,7 +57,7 @@ public class UserService {
         userRepository.deleteById(id);
     }
 
-    private UserDTO convertToDTO(User user){
+    private UserDTO convertToDTO(User user) {
         UserDTO userDTO = new UserDTO();
         userDTO.setId(user.getId());
         userDTO.setUsername(user.getUsername());
@@ -67,3 +67,4 @@ public class UserService {
         return userDTO;
     }
 }
+
